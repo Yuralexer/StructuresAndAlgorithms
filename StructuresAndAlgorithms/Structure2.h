@@ -93,10 +93,12 @@ namespace std {
 	void addOperationInDataBase(table& db, operation a) {
 		db.n++;
 		operation* temp_table = new operation[db.n];
+		for (int i = 1; i < db.n; i++)
+			temp_table[i] = db.dataBase[i - 1];
 		temp_table[0] = a;
-		for (int i = 0; i < db.n; i++)
-			temp_table[i + 1] = db.dataBase[i];
+		delete[] db.dataBase;
 		db.dataBase = temp_table;
+
 	}
 
 	void deleteOperations(table& db, int cash_register_code) {
@@ -113,6 +115,7 @@ namespace std {
 				temp_table[i - count_remove_operations] = db.dataBase[i];
 
 		db.n -= count_remove_operations;
+		delete[] db.dataBase;
 		db.dataBase = temp_table;
 	}
 }

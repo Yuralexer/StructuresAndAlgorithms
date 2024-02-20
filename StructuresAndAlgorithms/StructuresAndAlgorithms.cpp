@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <Windows.h>
 #include <conio.h>
-#include "Structure1.h"
+#include "Structure2.h"
 
 using namespace std;
 
