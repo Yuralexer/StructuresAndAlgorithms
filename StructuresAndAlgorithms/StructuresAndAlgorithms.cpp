@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <Windows.h>
 #include <conio.h>
-#include "Structure2.h"
+#include "Structure3.h"
 
 using namespace std;
 
@@ -10,20 +10,31 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    table a;
-    operation i;
-    int count, n, n2;
-    cin >> count >> n >> n2;
-    for (int j = 0; j < count; j++) {
-        i = addoperation();
-        addOperationInDataBase(a, i);
+    table T;
+    operation temp_Operation;
+    int i, j;
+    while (true) {
+        cout << "Введите цифру операции (1 - добавить опреацию, 2 - распечатать таблицу, 3 - удалить операцию): ";
+        i = _getch() - '0';
+        system("cls");
+        switch (i) {
+        case 1:
+            temp_Operation = addoperation();
+            addOperationInDataBase(T, temp_Operation);
+            printDataBase(T, temp_Operation.cash_register_code);
+            break;
+        case 2:
+            cout << "Введите цифру кассы для отображения: ";
+            j = _getch() - '0';
+            printDataBase(T, j);
+            break;
+        case 3:
+            cout << "Введите цифру кассы, которую нужно удалить: ";
+            j = _getch() - '0';
+            deleteOperations(T, j);
+            break;
+        default: break;
+        }
     }
-    printDataBase(a, n);
-    _getch();
-    deleteOperations(a, n);
-    printDataBase(a, n);
-    _getch();
-    printDataBase(a, n2);
-
 }
 

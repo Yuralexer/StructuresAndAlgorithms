@@ -96,11 +96,13 @@ namespace std {
 	}
 
 	void deleteOperations(table& db, int cash_register_code) {
-		for (int i = 0; i < db.n; i++) {
+		int i = 0;
+		while (i < db.n) {
 			if (db.dataBase[i].cash_register_code == cash_register_code) {
 				db.dataBase.erase(db.dataBase.begin() + i);
 				db.n--;
 			}
+			else i++;
 		}
 	}
 }
