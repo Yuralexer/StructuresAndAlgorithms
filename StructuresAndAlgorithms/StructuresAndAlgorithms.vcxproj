@@ -130,9 +130,11 @@
     <ClCompile Include="StructuresAndAlgorithms.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Practic2_ToPost.h" />
     <ClInclude Include="Structure1.h" />
     <ClInclude Include="Structure2.h" />
     <ClInclude Include="Structure3.h" />
+    <ClInclude Include="TestingStructures.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
