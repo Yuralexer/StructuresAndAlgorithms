@@ -130,6 +130,7 @@
     <ClCompile Include="StructuresAndAlgorithms.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Practic2_ToIn.h" />
     <ClInclude Include="Practic2_ToPost.h" />
     <ClInclude Include="Structure1.h" />
     <ClInclude Include="Structure2.h" />

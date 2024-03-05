@@ -35,5 +35,8 @@
     <ClInclude Include="Practic2_ToPost.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Practic2_ToIn.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
