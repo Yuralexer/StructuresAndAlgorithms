@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Practic2_ToIn.h" />
     <ClInclude Include="Practic2_ToPost.h" />
+    <ClInclude Include="Practic2_ToPre.h" />
     <ClInclude Include="Structure1.h" />
     <ClInclude Include="Structure2.h" />
     <ClInclude Include="Structure3.h" />
